@@ -26,7 +26,7 @@ const appConfig = useAppConfig()
 
 <style lang="scss" scoped>
 .z-footer {
-    @include bgImg('./footer.png');
+    @include bgImg('https://cdn.jsdelivr.net/gh/Labmem-00/img-hosting@main/LabBlog/footer.png');
     margin: 3rem 1rem;
     font-size: 0.9em;
     color: var(--c-text-2);
