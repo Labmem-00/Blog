@@ -42,13 +42,7 @@ github:
 
 ## 开发过程
 
-::link-banner
----
-banner: https://7.isyangs.cn/24/66d4c3ea35003-24.jpg
-title: 博客进化：从 Hexo 到 Nuxt Content
-link: /2024/blog-using-nuxt
----
-::
+
 
 ## 技术架构
 

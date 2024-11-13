@@ -16,14 +16,6 @@ recommend: 50
 
 和要串流的设备位于同一局域网，如果不是，请尝试使用 Tailscale 或者 Zerotier 进行虚拟组网，参见此教程：
 
-::link-banner
----
-title: Tailscale 不完全使用指南
-banner: https://7.isyangs.cn/24/6664009cce512-24.jpg
-link: /2023/tailscale-incomplete-guide
----
-::
-
 你也可以通过 IPv6 进行公网串流，但需要注意，“IPv6临时地址”特性或者防火墙可能会导致无法正常连接。
 
 ## 服务端
@@ -32,13 +24,6 @@ link: /2023/tailscale-incomplete-guide
 
 更推荐使用 Sunshine 作为服务端，Sunshine的默认配置可以很好地工作，一般不需要修改。
 
-::link-card
----
-icon: https://docs.lizardbyte.dev/projects/sunshine/en/latest/_static/sunshine.png
-title: Sunshine 官网
-link: https://app.lizardbyte.dev/Sunshine/?lng=zh-CN
----
-::
 
 ## 客户端
 
