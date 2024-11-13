@@ -1,0 +1,33 @@
+@mixin border{
+    border: 1px solid red;
+}
+
+@mixin font-normal{
+    --font-family: "MiSans VF", "MiSans", "PingFang SC", system-ui, sans-serif;
+    --font-serif: "Noto Serif SC", "华文中宋", "Times New Roman", serif;
+    --font-monospace: "SFMono-Regular", "Cascadia Code", "Fira Code",
+        "JetBrains Mono", "Menlo", "Monaco", "Consolas", "Noto Sans Mono",
+        "monospace", "MiSans VF", "MiSans", "PingFang SC", system-ui, monospace;
+    --font-stroke-free: "Helvetica";
+    --font-stroke-free: "Inter", "Helvetica", "Arial", system-ui, sans-serif;
+    --font-weight-normal: 400;
+    --font-weight-medium: 450;
+    --font-weight-bold: 500;
+    font: normal 1rem/1.4 sans-serif;
+    font-family: var(--font-family);
+    font-synthesis: style;
+    font-size: 16px;
+    font-weight: var(--font-weight-normal);
+    word-wrap: break-word;
+}
+
+@mixin bgImg($src: '') {
+    @if $src != '' {
+        background-image: url($src);
+    } @else {
+        background-image: none; 
+    }
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: right center;
+}

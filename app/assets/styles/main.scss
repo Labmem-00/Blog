@@ -1,0 +1,121 @@
+:root {
+    @include font-normal();
+    //全局颜色配置
+    color: var(--c-text-1);
+    background-color: hsl(220deg 20% 98%);
+    background-color: var(--c-bg-1);
+    transition: background-color 0.3s;
+
+    //滚动条配置，始终显示垂直滚动条，避免布局抖动
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+    scroll-padding: 2rem;
+    scrollbar-color: var(--c-text-3) transparent;
+
+    // 浏览器兼容配置
+    -webkit-text-size-adjust: 100%; /* 禁止 iOS 上文本大小自动调整 */
+    -ms-text-size-adjust: 100%; /* 禁止 IE 和 Edge 自动调整文本大小 */
+    -ms-overflow-style: scrollbar; /* 使用传统滚动条样式（在 IE 和 Edge 中） */
+    -webkit-tap-highlight-color: rgba(0,0,0,0); /* 移除ios设备上的点击高亮效果 */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+
+*,
+::before,
+::after {
+    box-sizing: border-box;
+}
+
+::selection {
+    background-color: var(--c-primary-soft);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+strong {
+    font-weight: var(--font-weight-bold);
+
+    &.text-story {
+        font-weight: bolder;
+    }
+}
+
+a {
+    text-decoration: none;
+    color: currentcolor;
+}
+
+code,
+pre {
+    font-family: "Cascadia Code", "Noto Sans Mono", Consolas, monospace;
+    font-family: var(--font-monospace);
+}
+
+menu,
+ol,
+ul {
+    list-style: none;
+}
+
+button {
+    cursor: pointer;
+}
+
+button,
+input,
+textarea {
+    background: none;
+    font: inherit;
+    color: currentcolor;
+
+    &:disabled {
+        color: var(--c-text-3);
+        cursor: not-allowed;
+    }
+
+    .iconify:only-child {
+        display: block;
+    }
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-story {
+    font-family: serif;
+    font-family: var(--font-serif);
+}
+
+.text-repeat {
+    text-shadow: 0.1em 0 var(--c-bg-soft), 0.2em 0 var(--c-bg-soft),
+        0.3em 0 var(--c-bg-soft), 0.4em 0 var(--c-bg-soft),
+        0.5em 0 var(--c-bg-soft);
+}
+
+.text-zoom {
+    display: inline-block;
+
+    @supports (animation-timeline: view()) {
+        animation: zoom 1s both;
+        animation-timeline: view();
+    }
+
+    @keyframes zoom {
+        from {
+            transform: scale(0.8);
+        }
+        to {
+            transform: scale(1.25);
+        }
+    }
+}
