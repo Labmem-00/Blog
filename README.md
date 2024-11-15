@@ -8,10 +8,16 @@
 ![SCSS](https://img.shields.io/badge/预编译器-SCSS-CC6699?logo=Sass&logoColor=ffffff&color=CC6699)
 ![ESLint](https://img.shields.io/badge/TS代码风格-ESLint-4B32C3?logo=eslint&logoColor=ffffff&color=4B32C3)
 ![Stylelint](https://img.shields.io/badge/CSS代码风格-Stylelint-5B2C6F?logo=stylelint&logoColor=ffffff&color=5B2C6F)
+![pnpm](https://img.shields.io/badge/工具-pnpm-0078D4?logo=pnpm&logoColor=ffffff&color=0078D4)
 
 
 
 ## 快速开始
+安装依赖项
+```sh
+pnpm i
+```
+
 运行开发环境
 
 ```sh
@@ -24,12 +30,13 @@ pnpm dev
 pnpm generate
 ```
 
-## 目录结构
+## 项目开发文档
+...编写中
 
-```sh
+<!-- ```sh
 .
 app # 项目源目录
-│   ├── assets # 资源文件(指定css预编译器 scss)
+│   ├── assets # 资源文件(指定css预编译scss)
 │   ├── components # 组件
 │   │   ├── content # 内容组件
 │   │   ├── patial # 模块组件
@@ -71,6 +78,6 @@ app # 项目源目录
 ├── nuxt.config.ts # Nuxt 配置
 ├── redirects.ts # 旧站点重定向配置
 └── vercel.json # Vercel 配置
-```
+``` -->
 
 
