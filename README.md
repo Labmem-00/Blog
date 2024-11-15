@@ -1,30 +1,38 @@
-# 纸鹿摸鱼处
+# Lab-Blog
 
-![框架](https://img.shields.io/badge/框架-Nuxt-00DC82?logo=Nuxt.js)
-![CMS](https://img.shields.io/badge/CMS-Nuxt%20Content-00DC82?logo=Nuxt.js)
-![部署平台](https://img.shields.io/badge/部署平台-Vercel-000000?logo=Vercel)
-![访问统计](https://img.shields.io/badge/访问统计-Umami-000000?logo=Umami)
-![代码风格](https://img.shields.io/badge/代码风格-ESLint-4B32C3?logo=ESLint)
-![代码风格](https://img.shields.io/badge/代码风格-Stylelint-263238?logo=Stylelint)
+## Lab系列博客项目，用于分享技术与记录Lab系列开发进度
+本项目基于开源项目进行二次开发,欢迎支持
+![纸🦌摸鱼](github.com/L33Z22L11/blog-v3)
 
-我的第三代个人博客，于 2024 年 8 月 11 日上线。
+## 项目技术栈
 
-## 预览.
 
-https://blog.zhilu.cyou
+## 快速开始
 
-## 特性
+### 安装依赖
 
-> [!Tip]
->
-> 请阅读 [在线文档](https://blog.zhilu.cyou/theme) 或 [仓库源文件](/content/theme.md)。
+```sh
+pnpm i
+```
+
+### 运行开发环境
+
+```sh
+pnpm dev
+```
+
+### 构建生产环境
+
+```sh
+pnpm generate
+```
 
 ## 目录结构
 
 ```sh
 .
-├── app # 前端
-│   ├── assets # 资源文件
+app # 项目源目录
+│   ├── assets # 资源文件(指定css预编译器 scss)
 │   ├── components # 组件
 │   │   ├── content # 内容组件
 │   │   ├── patial # 模块组件
@@ -68,22 +76,4 @@ https://blog.zhilu.cyou
 └── vercel.json # Vercel 配置
 ```
 
-## 快速开始
 
-### 安装依赖
-
-```sh
-pnpm i
-```
-
-### 运行开发环境
-
-```sh
-pnpm dev
-```
-
-### 构建生产环境
-
-```sh
-pnpm generate
-```
