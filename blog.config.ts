@@ -4,20 +4,20 @@ import type { FeedEntry } from '~/types/feed'
 // 存储 nuxt.config 和 app.config 共用的配置
 const blogConfig = {
     title: 'Lab-Blog',
-    subtitle: '某个晴天，在一个叫做秋叶原的地方，她的生命像泡沫那样消失了。',
-    description: '纸鹿本鹿的个人博客，分享技术与生活。折腾不止，摸鱼生活——摸门🙏🏻',
+    subtitle: '某个晴天，在一个叫做秋叶原的地方，她的生命如泡沫那般消失了。',
+    description: '你好, 我是zero, 活跃于21世纪互联网的角落, 如果你有幸在此落脚，欢迎找我聊聊',
     author: {
         name: 'Lab-Blog',
         avatar: 'https://cdn.jsdelivr.net/gh/Labmem-00/img-hosting@main/LabBlog/avator-v1.jpg',
         email: '13767083791@163.com',
-        homepage: 'https://www.zhilu.cyou/',
+        homepage: '',
     },
     copyright: {
         abbr: 'CC BY-NC-SA 4.0',
         name: '署名-非商业性使用-相同方式共享 4.0 国际',
         url: 'https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh-hans',
     },
-    favicon: '~/public/favicon.ico',
+    favicon: 'https://cdn.jsdelivr.net/gh/Labmem-00/img-hosting@main/LabBlog/favicon.ico',
     language: 'zh-CN',
     timeEstablished: '2023-04-1',
     timezone: 'Asia/Shanghai',

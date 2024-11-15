@@ -42,10 +42,24 @@ const keycut = computed(() => navigator?.userAgent.includes('Mac OS') ? '⌘K' :
 </template>
 
 <style lang="scss" scoped>
-#z-sidebar {
+#z-sidebar {    
+    @include bgImg('https://cdn.jsdelivr.net/gh/Labmem-00/img-hosting@main/LabBlog/siderBar.png');
+    background-position: center bottom;
     display: flex;
     flex-direction: column;
     color: var(--c-text-2);
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: var(--sb-color);// 半透明遮罩颜色
+        backdrop-filter: blur(px); // 模糊效果
+        z-index: -1;
+    }
 
     @media (max-width: $breakpoint-mobile) {
         position: fixed;
@@ -83,6 +97,7 @@ const keycut = computed(() => navigator?.userAgent.includes('Mac OS') ? '⌘K' :
 }
 
 .sidebar-nav {
+
     flex-grow: 1;
     top: 0;
     padding: 0 5%;

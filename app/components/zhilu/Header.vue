@@ -85,7 +85,7 @@ const appConfig = useAppConfig();
         font-weight: 600;
     }
     38.2% {
-        font-weight: 300;
+        font-weight: 500;
     }
     100% {
         font-weight: 900;

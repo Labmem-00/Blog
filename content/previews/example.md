@@ -1,7 +1,7 @@
 ---
 title: 组件样式示例
 date: 2024-09-21 23:18:18
-hideInfo: true
+hideInfo: false
 
 icon: https://www.zhilu.cyou/api/icon.png
 ---

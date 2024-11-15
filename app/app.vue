@@ -1,4 +1,5 @@
 <template>
+    <Rain></Rain>
     <NuxtLoadingIndicator />
     <SkipToContent />
     <ZSidebar />
@@ -17,7 +18,7 @@
 <!-- eslint-disable-next-line vue/enforce-style-attribute -->
 <style lang="scss">
 // Nuxt 根元素 id
-#z-root {
+#lab-root {
     display: flex;
     justify-content: center;
     gap: 1rem;
@@ -46,7 +47,7 @@ aside {
     // 此时即使设置 flex-grow，也会影响 #sidebar 无法正确 shrink
     width: $breakpoint-widescreen;
     min-width: 0; // 解决父级 flexbox 设置 justify-content: center 时溢出左侧消失的问题
-
+    flex-grow: 1;
     // 此处不建议给内容设置 padding
     > main {
         flex-grow: 1; // 使较小宽度的内容占满

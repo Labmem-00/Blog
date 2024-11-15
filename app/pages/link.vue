@@ -39,7 +39,7 @@ postLink.value && useContentHead(postLink.value)
     <FeedGroup label="友链" :feeds="friends" />
     <FeedGroup label="订阅" :feeds="subscriptions" />
 
-    <!-- <ContentRenderer :value="postLink">
+    <ContentRenderer :value="postLink">
         <ContentRendererMarkdown
             class="article"
             :value="postLink ?? {}"
@@ -52,7 +52,7 @@ postLink.value && useContentHead(postLink.value)
             />
         </template>
         <PostComment key="/link" />
-    </ContentRenderer> -->
+    </ContentRenderer>
 </template>
 
 <style lang="scss" scoped>

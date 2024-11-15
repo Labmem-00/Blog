@@ -1,6 +1,6 @@
 import type { BundledTheme } from "shiki";
 import blogConfig from "./blog.config";
-import redirects from "./redirects";
+// import redirects from "./redirects";
 
 const shikiOptions = {
     langs: blogConfig.fileExtensions,
@@ -10,17 +10,15 @@ const shikiOptions = {
 };
 
 export default defineNuxtConfig({
-
     devtools: { enabled: true },
-
     app: {
-        rootId: "z-root",
+        rootId: "lab-root",
         head: {
             htmlAttrs: {
                 lang: blogConfig.language,
             },
             link: [
-                { rel: "icon", href: '/favicon.ico' },
+                { rel: "icon", href: 'https://cdn.jsdelivr.net/gh/Labmem-00/img-hosting@main/LabBlog/favicon.ico' },
                 {
                     rel: "alternate",
                     type: "application/atom+xml",
@@ -43,10 +41,6 @@ export default defineNuxtConfig({
                     media: "none",
                     onload: 'this.media="all"',
                 },
-                // { rel: 'preconnect', href: 'https://fonts.loli.net' },
-                // { rel: 'preconnect', href: 'https://gstatic.loli.net' },
-                // { rel: 'stylesheet', href: 'https://fonts.loli.net/css2?family=Fira+Code:wght@300..700&family=Noto+Serif+SC:wght@200..900&display=swap', media: 'none', onload: 'this.media="all"' },
-                // { rel: 'stylesheet', href: 'https://gcore.jsdelivr.net/npm/nerdfonts-web/nf.min.css' },
             ],
             templateParams: {
                 separator: "|",
@@ -83,15 +77,6 @@ export default defineNuxtConfig({
         "@/assets/styles/reusable.scss",
     ],
 
-    // devServer: {
-    //     host: '0.0.0.0',
-    //     port: 443,
-    //     https: {
-    //         key: './ssl/zhilu-y.key',
-    //         cert: './ssl/zhilu-y.crt',
-    //     },
-    // },
-
     experimental: {
         viewTransition: true,
     },
@@ -101,7 +86,7 @@ export default defineNuxtConfig({
     },
 
     routeRules: {
-        ...redirects,
+        // ...redirects,
         "/api/stats": { prerender: true },
         "/atom.xml": { prerender: true },
         "/zhilu.opml": { prerender: true },
@@ -166,7 +151,7 @@ export default defineNuxtConfig({
     },
 
     icon: {
-        customCollections: [{ prefix: "zi", dir: "./assets/icons" }],
+        customCollections: [{ prefix: "zi", dir: "https://cdn.jsdelivr.net/gh/Labmem-00/img-hosting@main/LabBlog/favicon.ico" }],
         // BUG: 首次加载有概率无图标
     },
 
@@ -178,7 +163,6 @@ export default defineNuxtConfig({
         format: ["avif", "webp"],
     },
 
-    // ogImage: { enabled: false },
 
     robots: {
         disallow: ["/preview", "/previews/*"],
