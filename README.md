@@ -1,27 +1,17 @@
-# Lab-Blog
+## Lab系列博客项目，用于分享技术与记录Lab系列开发进度  
+本项目基于开源项目进行二次开发,欢迎支持[纸🦌摸鱼](github.com/L33Z22L11/blog-v3)
 
-## Lab系列博客项目，用于分享技术与记录Lab系列开发进度
-本项目基于开源项目进行二次开发,欢迎支持
-![纸🦌摸鱼](github.com/L33Z22L11/blog-v3)
-
-## 项目技术栈
-
+## 项目技术栈  
+![Vue](https://img.shields.io/badge/框架-Vue-42b883?logo=vue.js&logoColor=42b883&color=282C34)
 
 ## 快速开始
-
-### 安装依赖
-
-```sh
-pnpm i
-```
-
-### 运行开发环境
+运行开发环境
 
 ```sh
 pnpm dev
 ```
 
-### 构建生产环境
+构建生产环境
 
 ```sh
 pnpm generate
