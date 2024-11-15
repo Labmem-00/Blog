@@ -6,8 +6,8 @@
 ![Nuxt](https://img.shields.io/badge/框架-Nuxt-00DC82?logo=Nuxt.js&logoColor=ffffff&color=00DC82)
 ![TypeScript](https://img.shields.io/badge/code-TypeScript-3178C6?logo=TypeScript&logoColor=ffffff&color=3178C6)
 ![SCSS](https://img.shields.io/badge/预编译器-SCSS-CC6699?logo=Sass&logoColor=ffffff&color=CC6699)
-![ESLint](https://img.shields.io/badge/TS代码风格-ESLint-4B32C3?logo=eslint&logoColor=ffffff&color=4B32C3)
-![Stylelint](https://img.shields.io/badge/CSS代码风格-Stylelint-5B2C6F?logo=stylelint&logoColor=ffffff&color=5B2C6F)
+![ESLint](https://img.shields.io/badge/代码风格-ESLint-4B32C3?logo=eslint&logoColor=ffffff&color=4B32C3)
+![Stylelint](https://img.shields.io/badge/代码风格-Stylelint-5B2C6F?logo=stylelint&logoColor=ffffff&color=5B2C6F)
 ![pnpm](https://img.shields.io/badge/工具-pnpm-0078D4?logo=pnpm&logoColor=ffffff&color=0078D4)
 
 
