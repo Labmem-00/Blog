@@ -2,7 +2,14 @@
 本项目基于开源项目进行二次开发,欢迎支持[纸🦌摸鱼](github.com/L33Z22L11/blog-v3)
 
 ## 项目技术栈  
-![Vue](https://img.shields.io/badge/框架-Vue-42b883?logo=vue.js&logoColor=42b883&color=282C34)
+![Vue](https://img.shields.io/badge/框架-Vue-42b883?logo=vue.js&logoColor=ffffff&color=42b883)
+![Nuxt](https://img.shields.io/badge/框架-Nuxt-00DC82?logo=Nuxt.js&logoColor=ffffff&color=00DC82)
+![TypeScript](https://img.shields.io/badge/code-TypeScript-3178C6?logo=TypeScript&logoColor=ffffff&color=3178C6)
+![SCSS](https://img.shields.io/badge/预编译器-SCSS-CC6699?logo=Sass&logoColor=ffffff&color=CC6699)
+![ESLint](https://img.shields.io/badge/TS代码风格-ESLint-4B32C3?logo=eslint&logoColor=ffffff&color=4B32C3)
+![Stylelint](https://img.shields.io/badge/CSS代码风格-Stylelint-5B2C6F?logo=stylelint&logoColor=ffffff&color=5B2C6F)
+
+
 
 ## 快速开始
 运行开发环境
