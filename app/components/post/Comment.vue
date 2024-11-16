@@ -41,6 +41,18 @@ onMounted(() => initTwikoo())
 :deep(#twikoo) {
     margin: 2em 0;
 
+    //对助手表情包特化样式
+    .tk-owo-emotion[src^='https://cdn.jsdelivr.net/gh/Labmem-00/img-hosting@main/LabBlog-emoji/']{
+        width: 72px;
+        height: 72px;
+    }
+    .OwO-item{
+        img[src^='https://cdn.jsdelivr.net/gh/Labmem-00/img-hosting@main/LabBlog-emoji/']{
+            width: auto;
+            height:100%;
+        }
+    }
+
     .tk-admin-container {
         position: fixed;
         z-index: 1;

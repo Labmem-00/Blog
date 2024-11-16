@@ -88,8 +88,6 @@ export default defineNuxtConfig({
     routeRules: {
         // ...redirects,
         "/api/stats": { prerender: true },
-        "/atom.xml": { prerender: true },
-        "/zhilu.opml": { prerender: true },
     },
 
     runtimeConfig: {
@@ -157,8 +155,6 @@ export default defineNuxtConfig({
 
     image: {
         domains: [
-            // 'blog.zhilu.cyou',
-            // '7.isyangs.cn',
         ],
         format: ["avif", "webp"],
     },

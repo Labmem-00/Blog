@@ -5,12 +5,12 @@ import type { FeedEntry } from '~/types/feed'
 const blogConfig = {
     title: 'Lab-Blog',
     subtitle: '某个晴天，在一个叫做秋叶原的地方，她的生命如泡沫那般消失了。',
-    description: '你好, 我是zero, 活跃于21世纪互联网的角落, 如果你有幸在此落脚，欢迎找我聊聊',
+    description: 'El Psy Kongroo, 欢迎光临未来道具研究所博客分站, 本站致力于记录某些奇怪技术?与Lab项目进度',
     author: {
-        name: 'Lab-Blog',
+        name: 'Labmem00',
         avatar: 'https://cdn.jsdelivr.net/gh/Labmem-00/img-hosting@main/LabBlog/avator-v1.jpg',
         email: '13767083791@163.com',
-        homepage: '',
+        homepage: 'https://blog.labmem.chat',
     },
     copyright: {
         abbr: 'CC BY-NC-SA 4.0',
@@ -21,7 +21,7 @@ const blogConfig = {
     language: 'zh-CN',
     timeEstablished: '2023-04-1',
     timezone: 'Asia/Shanghai',
-    url: 'https://blog.zhilu.cyou/',
+    url: 'https://blog.labmem.chat',
 
     // 用于 Shiki、Plain Shiki 引入代码高亮
     // 同时用于显示代码块语言对应的 Iconify Catppuccin 图标
@@ -38,7 +38,7 @@ const blogConfig = {
 
 export const feedEntry = <FeedEntry>{
     author: blogConfig.author.name,
-    sitenick: '摸鱼处',
+    sitenick: 'Lab',
     title: blogConfig.title,
     desc: blogConfig.subtitle || blogConfig.description,
     link: blogConfig.url,

@@ -11,25 +11,7 @@ postLink.value && useContentHead(postLink.value)
 
 <template>
     <header class="link-reminder">
-        <div class="content">
-            <p><Icon name="ph:newspaper-clipping-bold" /> 我会通过订阅源阅读友链文章。</p>
-            <p>
-                欢迎加入 QQ 群 <Tip copy>
-                    169994096
-                </Tip> 闲聊或技术交流。
-            </p>
-            <p>
-                我制作了本站的 <ProseA href="/zhilu.opml">
-                    友链源 OPML 聚合
-                </ProseA>，可导入阅读器或 <ProseA href="https://app.follow.is/share/lists/72840182614552576">
-                    订阅 Follow List
-                </ProseA>。
-            </p>
-        </div>
         <div class="operations">
-            <ProseA href="/atom.xml" icon="ph:rss-simple-bold">
-                订阅源
-            </ProseA>
             <ProseA href="https://app.follow.is/share/feeds/62533754566736896" icon="ph:list-plus-bold">
                 在 Follow 上订阅
             </ProseA>
@@ -66,15 +48,6 @@ postLink.value && useContentHead(postLink.value)
     padding: 0.8rem 1rem;
     border-radius: 1rem;
     background: var(--c-primary-soft);
-
-    .content {
-        flex-basis: 20em;
-        flex-grow: 3;
-
-        p + p {
-            margin-top: 0.2em;
-        }
-    }
 
     .operations {
         display: flex;
