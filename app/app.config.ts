@@ -22,27 +22,23 @@ export default defineAppConfig({
         copyright: `© ${new Date().getFullYear()} ${blogConfig.author.name}`,
         iconNav: <NavItem[]>[
             { icon: 'ph:house-bold', text: '个人主页', url: 'https://github.com/Labmem-00' },
-            { icon: 'ri:qq-line', text: '交流群: 169994096', url: 'https://jq.qq.com/?_wv=1027&k=lQfNSeEd' },
-            { icon: 'ph:github-logo-bold', text: 'GitHub: L33Z22L11', url: 'https://github.com/L33Z22L11' },
-            { icon: 'ph:rss-simple-bold', text: 'Atom订阅', url: '/atom.xml' },
-            { icon: 'ph:subway-bold', text: '开往', url: 'https://www.travellings.cn/go-by-clouds.html' },
         ],
         nav: <Nav>[
             {
-                title: '世界线跃迁',
+                title: '跃迁',
                 items: [
                     { icon: 'ph:subway-bold', text: '开往', url: 'https://www.travellings.cn/go-by-clouds.html' },
                 ],
             },
             {
-                title: '关于Labmem',
+                title: '关于',
                 items: [
                     { icon: 'ph:github-logo-bold', text: 'Labmem00', url: 'https://github.com/Labmem-00' },
                     { icon: 'ri:bilibili-fill', text: 'BiliBili', url:'https://space.bilibili.com/484838750'}
                 ],
             },
             {
-                title: 'D-mail?',
+                title: '信息',
                 items: [
                     { icon: 'ph:swatches-bold', text: '主题灵感源自Stellar', url: '/theme' },
                     { icon: 'ph:certificate-bold', text: '萌ICP备20246888号', url: 'https://icp.gov.moe/?keyword=20246888' },
@@ -53,7 +49,7 @@ export default defineAppConfig({
     },
 
     header: {
-        logo: 'https://cdn.jsdelivr.net/gh/Labmem-00/img-hosting@main/LabBlog/avator-v1.jpg',
+        logo: 'https://cdn.jsdelivr.net/gh/Labmem-00/img-hosting@main/LabBlog/avator-v2.jpg',
         text: true,
         subtitle: blogConfig.subtitle,
         emojiTail: ['🌀', '⏳', '🎧 ', '🥼', '📺'],
@@ -68,17 +64,24 @@ export default defineAppConfig({
         {
             title: '',
             items: [
-                { icon: 'ph:files-bold', text: '文章', url: '/' },
+                { icon: 'ph:files-bold', text: '文稿', url: '/' },
                 { icon: 'ph:tag-bold', text:'分类', url:'/category'},
                 { icon: 'ph:archive-bold', text: '归档', url: '/archive' },
                 { icon: 'ph:link-bold', text: '友链', url: '/link' },
-                
             ],
         },
     ],
 
     stats: {
         wordCount: '约10万',
+        postCount: 99
+    },
+
+    interactive: {
+        weather:{
+            icon: 'wi:day-sleet',
+            tip: '获取天气'
+        }
     },
 
     themes: {

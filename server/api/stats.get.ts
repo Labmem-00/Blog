@@ -6,10 +6,11 @@ export default defineEventHandler(async (event) => {
 
     const stats = {
         totalWords: 0,
+        totalPosts: 0,
     }
 
     const posts = await serverQueryContent(event).find()
-
+    stats.totalPosts = posts.length;
     posts.forEach(async (post) => {
         // console.log(`[stats] totalWords: ${stats.totalWords} += ${post.readingTime.words} @[${post.title}](${post._path})`)
         stats.totalWords += post.readingTime.words

@@ -35,6 +35,7 @@ const keycut = computed(() => navigator?.userAgent.includes('Mac OS') ? '⌘K' :
             </template>
         </nav>
         <footer class="sidebar-footer">
+            <InteractiveButton></InteractiveButton>
             <ThemeToggle />
             <ZIconNavList :list="appConfig.footer.iconNav" />
         </footer>

@@ -1,4 +1,5 @@
 @mixin dark-theme {
+    --c-normal: gold;
     --c-text: hsl(var(--hue-theme) 0% 100%);
     --c-text-1: hsl(var(--hue-theme) 0% 90%);
     --c-text-2: hsl(var(--hue-theme) 0% 70%);
@@ -23,6 +24,7 @@
 :root,
 .light {
     --hue-theme:210deg;
+    --c-normal: blue;
     --c-text: hsl(var(--hue-theme) 0% 0%);
     --c-text-1: hsl(var(--hue-theme) 0% 20%);
     --c-text-2: hsl(var(--hue-theme) 0% 40%);

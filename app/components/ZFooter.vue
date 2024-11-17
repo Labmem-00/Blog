@@ -5,7 +5,7 @@ const appConfig = useAppConfig();
 <template>
     <footer class="z-footer">
         <div class="footer-line">
-            <P><strong>TimeLeap-</strong></P>
+            <P><strong>TimeToLeap |&nbsp</strong></P>
             <p>到别的世界线看看？</p>
         </div>
         <nav class="footer-nav">
@@ -41,7 +41,7 @@ const appConfig = useAppConfig();
     display: flex;
     justify-content: center;
     color: white;
-    font-size: 21px;
+    font-size: 16px;
     position: absolute;
     top: -30px;
     background-image: linear-gradient(
@@ -72,6 +72,7 @@ const appConfig = useAppConfig();
         h3 {
             margin: 0.5em;
             font: inherit;
+            color: black;
         }
 
         a {

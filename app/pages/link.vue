@@ -10,23 +10,23 @@ postLink.value && useContentHead(postLink.value)
 </script>
 
 <template>
-    <header class="link-reminder">
+    <!-- <header class="link-reminder">
         <div class="operations">
             <ProseA href="https://app.follow.is/share/feeds/62533754566736896" icon="ph:list-plus-bold">
                 在 Follow 上订阅
             </ProseA>
         </div>
-    </header>
+    </header> -->
 
     <FeedGroup label="友链" :feeds="friends" />
     <FeedGroup label="订阅" :feeds="subscriptions" />
 
     <ContentRenderer :value="postLink">
-        <ContentRendererMarkdown
+        <!-- <ContentRendererMarkdown
             class="article"
             :value="postLink ?? {}"
             tag="article"
-        />
+        /> -->
         <template #empty>
             <ZError
                 icon="solar:confounded-square-bold-duotone"
