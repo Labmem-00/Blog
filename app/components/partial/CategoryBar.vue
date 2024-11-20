@@ -4,7 +4,7 @@ const layoutStore = useLayoutStore();
 </script>
 
 <template>
-    <div class="cate-bar" @click.stop>
+    <div class="cate-bar" @click.stop="layoutStore.closeOne('category')" >
         <Transition name="spring">
             <ul v-if="layoutStore.isOpen('category')">
                 <li

@@ -19,6 +19,12 @@ const orderBy = defineModel<keyof typeof orderMap>({
     default: "date",
 });
 const emit = defineEmits(["direction"]);
+const props = withDefaults(defineProps<{
+    isOpenCate?: boolean
+}>(),
+{
+    isOpenCate: true
+})
 
 function switchOrder() {
     const orderKeys = Object.keys(orderMap) as (keyof typeof orderMap)[];
@@ -39,7 +45,7 @@ onBeforeUnmount(() => {
 
 <template>
     <div class="order-toggle">
-        <button @click="layoutStore.toggle('category')">
+        <button @click="layoutStore.toggle('category')" v-if="props.isOpenCate">
             <Icon
                 :name="
                     layoutStore.isOpen('category') ? 'fe:book' : 'prime:book'
@@ -75,7 +81,6 @@ onBeforeUnmount(() => {
     & button:first-of-type{
         position: relative;
         left: 15px;
-        top: 1px;
         width: 100px;
     }
 

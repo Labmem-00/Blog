@@ -17,7 +17,7 @@ const [emblaRef, emblaApi] = emblaCarouselVue({
 <template>
     <div class="z-slide">
         <div class="z-slide-title">
-            <span class="title">精选文章</span>
+            <span class="title">精选推荐</span>
             <div class="tip">
                 <Icon name="ph:hand-grabbing-bold" />
                 拖拽查看

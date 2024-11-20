@@ -3,11 +3,10 @@ const appConfig = useAppConfig()
 const timeEstablished = appConfig.timeEstablished
 
 const blogLog = [
-    { date: '2024-11-14', content: 'canvas实现全屏的飘雪动画,调整布局颜色，白天微微小雪，夜晚骤雪急下'},
-    { date: '2024-11-12', content: '添加文章分类页面'},
-    { date: '2024-11-10', content: '添加若干小功能和代码注释, 文章与归档页面添加升降序选项'},
-    { date: '2024-11-3', content: '迁移至Nuxt开源项目：https://blog.zhilu.cyou,再此基础上进行二次开发' },
-    { date: '2023-11-2', content: '网站首屏加载缓慢,SEO优化困难,寻找替代方案' },
+    { date: '2024-11-14', content: '添加文章分类功能，详情页添加文章进度指示条'},
+    { date: '2024-11-12', content: 'canvas实现全屏的飘雪动画, 添加专栏页面，添加时间与文章记录'},
+    { date: '2024-11-10', content: '网站上线，添加若干小功能和代码注释, 文章与归档页面添加升降序选项'},
+    { date: '2023-11-2', content: '网站首屏加载缓慢,SEO优化困难,迁移至Nuxt开源项目https://blog.zhilu.cyou进行二次开发' },
     { date: '2024-06-21', content: 'Vue+NodeJS搭建全栈式博客' },
     { date: timeEstablished, content: '更新第一篇文章' },
 ]

@@ -4,6 +4,7 @@ date: 2024-09-21 23:18:18
 hideInfo: false
 categories: [代码]
 icon: https://www.zhilu.cyou/api/icon.png
+recommend: 1
 ---
 
 ## a (`ProseA`)

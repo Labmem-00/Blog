@@ -52,7 +52,7 @@ const changeOrderDir = ()=>{
 
 <template>
     <div class="archive">
-        <ZOrderToggle @direction="changeOrderDir" v-model="orderBy" />
+        <ZOrderToggle @direction="changeOrderDir" v-model="orderBy" :is-open-cate="false" />
         <div
             v-for="[year, yearGroup] in listGrouped"
             :key="year"
