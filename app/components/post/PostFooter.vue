@@ -6,7 +6,7 @@ const appConfig = useAppConfig()
 </script>
 
 <template>
-    <div class="post-footer">
+    <div id="post-footer">
         <section v-if="references" class="reference">
             <div class="title">
                 参考链接
@@ -41,7 +41,7 @@ const appConfig = useAppConfig()
 </template>
 
 <style lang="scss" scoped>
-.post-footer {
+#post-footer {
     margin: 2rem 0.5rem;
     border: 1px solid var(--c-border);
     border-radius: 1rem;

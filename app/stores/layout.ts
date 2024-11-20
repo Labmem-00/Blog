@@ -5,6 +5,7 @@ const defaultState = {
     sidebar: false,
     aside: false,
     search: false,
+    category: false
 }
 
 type LayoutSection = keyof typeof defaultState
@@ -20,6 +21,9 @@ export const useLayoutStore = defineStore('layout', () => {
         Object.keys(open.value).forEach((key) => {
             open.value[key as LayoutSection] = false
         })
+    }
+    const closeOne = (key: LayoutSection) =>{
+        open.value[key] = false;
     }
 
     const toggle = (key: LayoutSection) => {
@@ -40,6 +44,7 @@ export const useLayoutStore = defineStore('layout', () => {
         isAnyOpen,
         asideItems,
         closeAll,
+        closeOne,
         toggle,
         setAside,
         isOpen,

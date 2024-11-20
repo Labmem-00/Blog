@@ -118,7 +118,7 @@ const categoryIcon = appConfig.article.categories[categoryLabel!]?.icon
     opacity: 0.8;
     top: 0;
     right: 0;
-    width: min(320px, 50%);
+    width: min(380px, 50%);
     height: 100%;
     margin: 0;
     mask: linear-gradient(to right, transparent, #fff 50%);

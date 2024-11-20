@@ -1,24 +1,65 @@
 <script setup lang="ts">
-import type { TocLink } from '@nuxt/content'
+import type { TocLink } from "@nuxt/content";
+import { ref } from "vue";
 
-const route = useRoute()
-const [DefineTemplate, ReuseTemplate] = createReusableTemplate()
+const progress = ref(0);
+const mainContent = ref<HTMLElement | null>(null);
+const twikoo = ref<HTMLElement | null>(null);
+let ticking = false; // 控制是否需要执行滚动计算
+// 计算滚动进度
+const calculateProgress = () => {
+    if (!mainContent.value || !twikoo.value) return;
+    const mainContentTop = mainContent.value.getBoundingClientRect().top;
+    const twikooTop = twikoo.value.getBoundingClientRect().top;
+    const scrollTop = window.scrollY;
+    const totalHeight = twikooTop - mainContentTop;
 
+    if (scrollTop < mainContentTop) {
+        progress.value = 0;
+        return;
+    }
+    const scrollPercent = Math.round((scrollTop / totalHeight) * 100);
+    progress.value = Math.min(100, Math.max(0, scrollPercent));
+};
+
+// 使用节流的方式减少滚动事件的触发频率
+const onScroll = () => {
+    if (!ticking) {
+        requestAnimationFrame(() => {
+            calculateProgress();
+            ticking = false;
+        });
+        ticking = true;
+    }
+};
+
+const route = useRoute();
+const [DefineTemplate, ReuseTemplate] = createReusableTemplate();
 // 如果此处出问题，还会影响到文章获取
-// 若 watch route.path，SSG 下文章间路由时新文章数据会写入老文章键中
-const { data: post } = await useAsyncData(
-    route.path,
-    () => queryContent(route.path).findOne(),
-)
+// 若 watch route.path，SSG 下文章间路由时新文章数据会写入老文章键`中
+const { data: post } = await useAsyncData(route.path, () =>
+    queryContent(route.path).findOne()
+);
 
-const toc = computed(() => post.value?.body?.toc)
-const { activeTocItem } = useTocAutoHighlight(() => toc.value?.links ?? [])
+const toc = computed(() => post.value?.body?.toc);
+const { activeTocItem } = useTocAutoHighlight(() => toc.value?.links ?? []);
 
 function hasActiveChild(entry: TocLink, activeId: string | null): boolean {
-    if (entry.id === activeId)
-        return true
-    return entry.children?.some(child => hasActiveChild(child, activeId)) ?? false
+    if (entry.id === activeId) return true;
+    return (
+        entry.children?.some((child) => hasActiveChild(child, activeId)) ??
+        false
+    );
 }
+
+onMounted(() => {
+    mainContent.value = document.getElementById("main-content");
+    twikoo.value = document.getElementById("post-footer"); // 监听滚动事件
+    window.addEventListener("scroll", onScroll);
+});
+onBeforeUnmount(() => {
+    window.removeEventListener("scroll", onScroll);
+});
 </script>
 
 <template>
@@ -29,12 +70,17 @@ function hasActiveChild(entry: TocLink, activeId: string | null): boolean {
                 :key="index"
                 :class="{
                     'has-active': hasActiveChild(entry, activeTocItem),
-                    'active': entry.id === activeTocItem,
+                    active: entry.id === activeTocItem,
                 }"
             >
                 <!-- 使用 <a> 确保键盘焦点切换 -->
-                <a :href="`#${entry?.id}`" :title="entry.text">{{ entry.text }}</a>
-                <ReuseTemplate v-if="entry.children" :toc-item="entry.children" />
+                <a :href="`#${entry?.id}`" :title="entry.text">{{
+                    entry.text
+                }}</a>
+                <ReuseTemplate
+                    v-if="entry.children"
+                    :toc-item="entry.children"
+                />
             </li>
         </ol>
     </DefineTemplate>
@@ -48,12 +94,13 @@ function hasActiveChild(entry: TocLink, activeId: string | null): boolean {
         <a href="#twikoo" aria-label="评论区">
             <Icon name="ph:chat-circle-text-bold" />
         </a>
+        <ClientOnly>
+            <ProgressCircle :progress="progress" :size="70"></ProgressCircle>
+        </ClientOnly>
     </h3>
     <div class="widget-body">
         <ReuseTemplate v-if="toc?.links" :toc-item="toc.links" />
-        <p v-else class="no-toc">
-            暂无目录信息
-        </p>
+        <p v-else class="no-toc">暂无目录信息</p>
     </div>
 </template>
 
@@ -81,7 +128,8 @@ function hasActiveChild(entry: TocLink, activeId: string | null): boolean {
             opacity: 0.94;
         }
 
-        &.has-active, &.active {
+        &.has-active,
+        &.active {
             opacity: 1;
             font-size: 1em;
         }

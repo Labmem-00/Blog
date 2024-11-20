@@ -43,6 +43,7 @@ const appConfig = useAppConfig();
     color: white;
     font-size: 16px;
     position: absolute;
+    border-radius: 10px;
     top: -30px;
     background-image: linear-gradient(
         to right,
@@ -72,7 +73,7 @@ const appConfig = useAppConfig();
         h3 {
             margin: 0.5em;
             font: inherit;
-            color: black;
+            color: var(--c-text);
         }
 
         a {

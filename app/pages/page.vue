@@ -1,5 +1,7 @@
 <script setup lang="ts">
 import { alphabetical, sort } from 'radash'
+const layoutStore = useLayoutStore()
+layoutStore.setAside(['blog_stats'])
 
 const appConfig = useAppConfig()
 useSeoMeta({
@@ -12,21 +14,54 @@ const perPage = appConfig.indexGenerator.perPage || 10
 const orderBy = ref(appConfig.indexGenerator.orderBy || 'date')
 //排序方向
 const orderDirection = ref(true)
+const categoryStore = useCategoryStore()
 
-const layoutStore = useLayoutStore()
-layoutStore.setAside(['blog_stats'])
+// useAsyncData默认只在组件渲染时加载一次，且自动缓存数据不便于控制
+const list = ref<any[]>([]);
+const cache = ref<{ [key: string]: any[] }>({})   // 用来缓存不同分类的数据
+const fetchData = async (category: string) => {
+    // 检查缓存是否存在
+    if (cache.value[category]) {
+        // 如果缓存中有数据，直接使用缓存数据
+        list.value = cache.value[category];
+        return;
+    }
+    const query = queryContent()
+        .only(['_path', 'categories', 'image', 'date', 'description', 'readingTime', 'recommend', 'title', 'updated'])
+        .where({ _original_dir: { $eq: '/posts' }, });
+
+    if (category !== '分类') {
+        query.where({ categories: { $in: [category] } });
+    }
+
+    const data = await query.find();
+    cache.value[category] = data;
+    list.value = data;
+};
+await fetchData(categoryStore.currentCate);
+watchEffect(() => {
+    const currentCategory = categoryStore.currentCate;
+    // 每当分类变化时，调用 fetchData 更新列表
+    fetchData(currentCategory);
+});
+
 
 const { data: listRaw } = await useAsyncData(
-    'posts_index',
-    () => queryContent()
+    'all_post',
+    () =>{
+        const query = queryContent()
         .only(['_path', 'categories', 'image', 'date', 'description', 'readingTime', 'recommend', 'title', 'updated'])
-        .where({ _original_dir: { $eq: '/posts' } })
-        .find(),
+        .where({ _original_dir: { $eq: '/posts' }, });
+        if(categoryStore.currentCate !=='分类'){
+            query.where({categories: {$in: [categoryStore.currentCate]}});
+        }
+        return query.find();
+    },
     { default: () => [] },
 )
-
+    
 const listSorted = computed(() => alphabetical(
-    listRaw.value,
+    list.value,
     item => item[orderBy.value],
     orderDirection.value ? 'desc' : 'asc',
 ))
