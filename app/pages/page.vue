@@ -16,29 +16,43 @@ const orderBy = ref(appConfig.indexGenerator.orderBy || 'date')
 const orderDirection = ref(true)
 const categoryStore = useCategoryStore()
 
+const list = ref<any[]>([]);  // 初始化为数组
+const queryKey = computed(() => `posts_${categoryStore.currentCate}`);  // 动态生成唯一的 key
 
-const data = ref<any>([]);
-const pending = ref(false);
-const error = ref(null);
+// 定义 fetchData 函数
+const fetchData = async (category: string) => {
+    const { data } = await useAsyncData(
+        queryKey.value, 
+        async () => {
+            const query = queryContent()
+                .only(['_path', 'categories', 'image', 'date', 'description', 'readingTime', 'recommend', 'title', 'updated'])
+                .where({ _original_dir: { $eq: '/posts' } });
 
-watchEffect(async () => {
-  pending.value = true;
-  try {
-    const query = queryContent()
-      .only(['_path', 'categories', 'image', 'date', 'description', 'readingTime', 'recommend', 'title', 'updated'])
-      .where({ _original_dir: { $eq: '/posts' } });
+            if (category !== '分类') {
+                query.where({ categories: { $in: [category] } });
+            }
 
-    if (categoryStore.currentCate !== '分类') {
-      query.where({ categories: { $in: [categoryStore.currentCate] } });
-    }
+            return query.find();
+        },
+        { 
+            immediate: true,  // 默认立即执行查询
+        }
+    );
 
-    data.value = await query.find();
-  } catch (err) {
-    error.value = err;
-  } finally {
-    pending.value = false;
-  }
+    // 更新 list 为 data
+    list.value = data.value;  // 使用 data.value 获取实际数据
+};
+
+// 初始加载数据
+await fetchData(categoryStore.currentCate);
+// 监听 categoryStore.currentCate 变化时自动更新
+watchEffect(() => {
+    const currentCategory = categoryStore.currentCate;
+    // 每当分类变化时，调用 fetchData 更新列表
+    fetchData(currentCategory);
 });
+
+
 
 
 
@@ -57,7 +71,7 @@ const { data: listRaw } = await useAsyncData(
 )
     
 const listSorted = computed(() => alphabetical(
-    data.value,
+    list.value,
     item => item[orderBy.value],
     orderDirection.value ? 'desc' : 'asc',
 ))
