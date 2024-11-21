@@ -24,7 +24,8 @@ const columns = appConfig.columns;
         <div class="column-contain">
             <div class="row">
                 <p class="column-item" v-for="(column, index) in columns">
-                    <img :src="column.img" alt="" />
+                    <img :src="column.img" alt="" >
+                    <span>{{ column.name }}</span>
                 </p>
             </div>
         </div>
@@ -33,38 +34,36 @@ const columns = appConfig.columns;
 
 <style lang="scss" scoped>
 .column-contain {
-    width: 100%;
+    position: relative;
+    top: 50px;
+    margin-bottom: 120px;
     .row {
         display: flex;
         flex-wrap: wrap;
-        gap: 20px; /* 设置间距 */
-        justify-content: center; /* 居中对齐 */
+        gap: 50px;
+        justify-content: center;
     }
 }
 
-.column-item{
-    flex: 0 0 25%; 
-    max-width: 20%;
-    box-sizing: border-box;
-    text-align: center;
-    background: #fff;
-    padding: 10px;
+.column-item {
+    width: 180px;
+    height: 240px;
+    font-size: 20px;
+    max-width: 240px;
+    background: #f5f5f5;
+    border: 5px solid #ddd;
     border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-
-    img {
-      width: 100%;
-      height: auto;
-      object-fit: cover;
-      margin-bottom: 10px;
+    box-sizing: border-box;
+    transform: rotate(10deg) scale(1); /* 默认旋转角度 */
+    transition: transform 0.3s ease, transform 0.3s ease; /* 设置旋转与放大的过渡效果 */
+    &:hover{
+        transform: rotate(0deg) scale(1.3);
     }
-}
-
-@media (max-width: 768px) {
-  .column-item {
-    flex: 1 1 calc(33.333% - 20px); /* 每行 3 个 */
-    max-width: calc(33.333% - 20px);
-  }
+    img {
+        width: 100%;
+        height: 90%;
+        object-fit: cover;
+    }
 }
 
 .column-title {

@@ -26,6 +26,10 @@ export default defineAppConfig({
         {name: "vue", img: 'https://cdn.jsdelivr.net/gh/Labmem-00/img-hosting@main/LabBlog/test1.jpg'},
         {name: "vue", img: 'https://cdn.jsdelivr.net/gh/Labmem-00/img-hosting@main/LabBlog/test1.jpg'},
         {name: "vue", img: 'https://cdn.jsdelivr.net/gh/Labmem-00/img-hosting@main/LabBlog/test1.jpg'},
+        {name: "vue", img: 'https://cdn.jsdelivr.net/gh/Labmem-00/img-hosting@main/LabBlog/test1.jpg'},
+        // {name: "vue", img: 'https://cdn.jsdelivr.net/gh/Labmem-00/img-hosting@main/LabBlog/test1.jpg'},
+        // {name: "vue", img: 'https://cdn.jsdelivr.net/gh/Labmem-00/img-hosting@main/LabBlog/test1.jpg'},
+        // {name: "vue", img: 'https://cdn.jsdelivr.net/gh/Labmem-00/img-hosting@main/LabBlog/test1.jpg'},
     ],
 
     footer: {
