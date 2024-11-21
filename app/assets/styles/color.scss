@@ -20,7 +20,6 @@
     --ld-shadow: var(--c-bg-a50);
     --sb-color:  rgba(0, 0, 0, 0.3);
     --bg-a: hsla(var(--hue-theme), 0%, 3%, 0.7);
-
 }
 
 :root,
@@ -48,7 +47,8 @@
     --ld-shadow: var(--c-bg-soft);
     --sb-color:  rgba(250, 250, 250, 0.4);
     --bg-a: hsla(var(--hue-theme), 0%, 98%, 0.7);
-
+    --bg-shadow-1: rgba(0, 0, 0, 0.6);
+    --bg-shadow-2: rgba(0, 0, 0, 0.3);
 }
 
 .dark {

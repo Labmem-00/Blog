@@ -79,7 +79,7 @@ export default defineAppConfig({
             title: '',
             items: [
                 { icon: 'ph:files-bold', text: '文稿', url: '/' },
-                { icon: 'ph:tag-bold', text:'专栏', url:'/blogColumn'},
+                { icon: 'ph:tag-bold', text:'专栏', url:'/column'},
                 { icon: 'ph:archive-bold', text: '归档', url: '/archive' },
                 { icon: 'ph:link-bold', text: '友链', url: '/link' },
             ],

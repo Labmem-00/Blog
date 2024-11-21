@@ -35,8 +35,8 @@ const columns = appConfig.columns;
 <style lang="scss" scoped>
 .column-contain {
     position: relative;
-    top: 50px;
-    margin-bottom: 120px;
+    top: 60px;
+    margin-bottom: 150px;
     .row {
         display: flex;
         flex-wrap: wrap;
@@ -50,24 +50,36 @@ const columns = appConfig.columns;
     height: 240px;
     font-size: 20px;
     max-width: 240px;
-    background: #f5f5f5;
-    border: 5px solid #ddd;
-    border-radius: 5px;
-    box-sizing: border-box;
-    transform: rotate(10deg) scale(1); /* 默认旋转角度 */
-    transition: transform 0.3s ease, transform 0.3s ease; /* 设置旋转与放大的过渡效果 */
+    border: 1px solid #000; /* 黑色细边框 */
+    border-radius: 3px;
+    box-shadow: -10px 5px 15px var(--bg-shadow-1);
+    transform: rotate(10deg) scale(1); 
+    transition: transform 0.3s ease, box-shadow 0.3s ease; 
     &:hover{
         transform: rotate(0deg) scale(1.3);
+        box-shadow: -20px 10px 25px var(--bg-shadow-2); 
+        span {
+            opacity: 0;
+            visibility: hidden; 
+        }
     }
     img {
         width: 100%;
-        height: 90%;
+        height: 100%;
+        border-radius: 3px;
         object-fit: cover;
+        
+    }
+    span{
+        opacity: 1; 
+        visibility: visible; /* 默认可见 */
+        transition: opacity 1s ease; /* 在不hover时触发过渡 */
     }
 }
 
 .column-title {
     position: relative;
+    top: 10px;
     & p:after {
         content: "";
         display: inline-block;
