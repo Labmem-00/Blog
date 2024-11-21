@@ -3,9 +3,12 @@
 
 <script lang="ts" setup>
 useSeoMeta({
-    title: "分类",
-    description: "文章分类"
+    title: "专栏",
+    description: "专栏文章"
 })
+
+const layoutStore = useLayoutStore()
+layoutStore.setAside(['blog_stats'])
 </script>
 
 <style lang="scss" scoped>

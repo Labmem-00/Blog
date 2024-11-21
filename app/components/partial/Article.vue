@@ -8,6 +8,7 @@ const appConfig = useAppConfig()
 const showAllDate = isTimeDiffSignificant(props.date, props.updated)
 
 const categoryLabel = props.categories?.[0];
+const categories = props.categories?.slice(1);
 const categoryColor = appConfig.article.categories[categoryLabel!]?.color
 const categoryIcon = appConfig.article.categories[categoryLabel!]?.icon
 </script>
@@ -47,6 +48,9 @@ const categoryIcon = appConfig.article.categories[categoryLabel!]?.icon
                 >
                     <Icon :name="categoryIcon" />
                     {{ categoryLabel }}
+                    <span v-for="category in categories">
+                        / {{ category }}
+                    </span>
                 </span>
                 <span v-if="readingTime?.words" class="article-words">
                     <Icon name="ph:paragraph-bold" />

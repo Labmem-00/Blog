@@ -11,6 +11,7 @@ export default defineAppConfig({
             经验分享: { icon: 'ph:mouse-bold', color: '#3af' },
             生活: { icon: 'ph:shooting-star-bold', color: '#3ba' },
             代码: { icon: 'ph:code-bold', color: '#77f' },
+            专栏: { icon : 'line-md:coffee-half-empty-twotone-loop',color:'rgba(255, 215, 0, 0.8)'}
         },
         order: {
             date: '创建日期',
@@ -66,7 +67,7 @@ export default defineAppConfig({
             title: '',
             items: [
                 { icon: 'ph:files-bold', text: '文稿', url: '/' },
-                { icon: 'ph:tag-bold', text:'分类', url:'/blogColumn'},
+                { icon: 'ph:tag-bold', text:'专栏', url:'/blogColumn'},
                 { icon: 'ph:archive-bold', text: '归档', url: '/archive' },
                 { icon: 'ph:link-bold', text: '友链', url: '/link' },
             ],
@@ -87,7 +88,7 @@ export default defineAppConfig({
 
     themes: {
         light: {
-            icon: 'ph:sun-bold',
+            icon: 'line-md:sun-rising-loop',
             tip: '浅色模式',
         },
         system: {
@@ -95,7 +96,7 @@ export default defineAppConfig({
             tip: '跟随系统',
         },
         dark: {
-            icon: 'ph:moon-bold',
+            icon: 'line-md:moon-alt-loop',
             tip: '深色模式',
         },
     },
