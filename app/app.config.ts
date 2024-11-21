@@ -11,7 +11,7 @@ export default defineAppConfig({
             经验分享: { icon: 'ph:mouse-bold', color: '#3af' },
             生活: { icon: 'ph:shooting-star-bold', color: '#3ba' },
             代码: { icon: 'ph:code-bold', color: '#77f' },
-            专栏: { icon : 'line-md:coffee-half-empty-twotone-loop',color:'rgba(255, 215, 0, 0.8)'}
+            专栏: { icon : 'line-md:coffee-half-empty-twotone-loop',color:'purple'}
         },
         order: {
             date: '创建日期',
@@ -19,6 +19,14 @@ export default defineAppConfig({
             // title: '标题',
         },
     },
+
+    columns : [
+        {name: "vue", img: 'https://cdn.jsdelivr.net/gh/Labmem-00/img-hosting@main/LabBlog/test1.jpg'},
+        {name: 'react', img: 'https://cdn.jsdelivr.net/gh/Labmem-00/img-hosting@main/LabBlog/test2.jpg'},
+        {name: "vue", img: 'https://cdn.jsdelivr.net/gh/Labmem-00/img-hosting@main/LabBlog/test1.jpg'},
+        {name: "vue", img: 'https://cdn.jsdelivr.net/gh/Labmem-00/img-hosting@main/LabBlog/test1.jpg'},
+        {name: "vue", img: 'https://cdn.jsdelivr.net/gh/Labmem-00/img-hosting@main/LabBlog/test1.jpg'},
+    ],
 
     footer: {
         copyright: `© ${new Date().getFullYear()} ${blogConfig.author.name}`,

@@ -6,6 +6,6 @@ export default <FeedGroup[]>[
         name: '',
         desc: '',
         entries: [
-        ]
+        ],
     },
 ]
