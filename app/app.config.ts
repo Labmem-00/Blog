@@ -11,7 +11,7 @@ export default defineAppConfig({
             经验分享: { icon: 'ph:mouse-bold', color: '#3af' },
             生活: { icon: 'ph:shooting-star-bold', color: '#3ba' },
             代码: { icon: 'ph:code-bold', color: '#77f' },
-            专栏: { icon : 'line-md:coffee-half-empty-twotone-loop',color:'purple'}
+            专栏: { icon : 'line-md:coffee-half-empty-twotone-loop',color:'#B97BDB'}
         },
         order: {
             date: '创建日期',

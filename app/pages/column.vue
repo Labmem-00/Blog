@@ -4,10 +4,13 @@ useSeoMeta({
     description: "专栏文章",
 });
 const layoutStore = useLayoutStore();
-layoutStore.setAside(["blog_stats"]);
+layoutStore.setAside([]);
 
 const appConfig = useAppConfig();
 const columns = appConfig.columns;
+const route = useRoute()  // 获取当前路由信息
+const isColumn = ref(true)
+
 </script>
 
 <template>
@@ -22,12 +25,17 @@ const columns = appConfig.columns;
             </p>
         </div>
         <div class="column-contain">
-            <div class="row">
+            <div class="row" v-show="route.path === '/column'">
                 <p class="column-item" v-for="(column, index) in columns">
+                    <router-link :to="`/column/${column.name}`">
                     <img :src="column.img" alt="" >
                     <span>{{ column.name }}</span>
+                    </router-link>
                 </p>
             </div>
+            <KeepAlive>
+                <NuxtPage></NuxtPage>
+            </KeepAlive>
         </div>
     </div>
 </template>
