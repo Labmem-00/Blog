@@ -8,9 +8,8 @@ layoutStore.setAside([]);
 
 const appConfig = useAppConfig();
 const columns = appConfig.columns;
-const route = useRoute()  // 获取当前路由信息
-const isColumn = ref(true)
-
+const route = useRoute(); // 获取当前路由信息
+const isColumn = ref(true);
 </script>
 
 <template>
@@ -27,14 +26,15 @@ const isColumn = ref(true)
         <div class="column-contain">
             <div class="row" v-show="route.path === '/column'">
                 <p class="column-item" v-for="(column, index) in columns">
-                    <router-link :to="`/column/${column.name}`">
-                    <img :src="column.img" alt="" >
-                    <span>{{ column.name }}</span>
-                    </router-link>
+                    <ZRawLink :to="`/column/${column.name}`">
+                        <img :src="column.img" alt="" />
+                        <span>{{ column.name }}</span>
+                    </ZRawLink>
                 </p>
             </div>
+            <!-- 神奇的解决方式，在动态切换子路由时不卡顿了 -->
             <KeepAlive>
-                <NuxtPage></NuxtPage>
+                <NuxtPage v-if="route.path !== '/column'"></NuxtPage>
             </KeepAlive>
         </div>
     </div>
@@ -61,14 +61,14 @@ const isColumn = ref(true)
     border: 1px solid #000; /* 黑色细边框 */
     border-radius: 3px;
     box-shadow: -10px 5px 15px var(--bg-shadow-1);
-    transform: rotate(10deg) scale(1); 
-    transition: transform 0.3s ease, box-shadow 0.3s ease; 
-    &:hover{
+    transform: rotate(10deg) scale(1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    &:hover {
         transform: rotate(0deg) scale(1.3);
-        box-shadow: -20px 10px 25px var(--bg-shadow-2); 
+        box-shadow: -20px 10px 25px var(--bg-shadow-2);
         span {
             opacity: 0;
-            visibility: hidden; 
+            visibility: hidden;
         }
     }
     img {
@@ -76,16 +76,18 @@ const isColumn = ref(true)
         height: 100%;
         border-radius: 3px;
         object-fit: cover;
-        
     }
-    span{
-        opacity: 1; 
+    span {
+        opacity: 1;
         visibility: visible; /* 默认可见 */
         transition: opacity 1s ease; /* 在不hover时触发过渡 */
     }
 }
 
 .column-title {
+    @media screen and (max-width: $breakpoint-phone) {
+        left: 28%;
+    }
     position: relative;
     top: 10px;
     & p:after {

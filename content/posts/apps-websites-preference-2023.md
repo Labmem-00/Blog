@@ -3,7 +3,7 @@ title: 我的 2023 电脑应用和网站习惯
 description: 梳理了2023年在 Windows 11 与 Arch Linux 系统上的核心应用（如 Edge、VS Code 等）及常访问的各类网站列表，涉及学习、开发、娱乐等多元需求。
 date: 2024-02-03 22:33:09
 updated: 2024-02-13 00:24:55
-categories: [专栏,Vue]
+categories: [专栏,vue]
 tags: [大学, 系统, 软件, 网站]
 recommend: 2
 ---
