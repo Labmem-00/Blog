@@ -21,15 +21,7 @@ export default defineAppConfig({
     },
 
     columns : [
-        {name: "vue", img: 'https://cdn.jsdelivr.net/gh/Labmem-00/img-hosting@main/LabBlog/test1.jpg'},
-        {name: 'react', img: 'https://cdn.jsdelivr.net/gh/Labmem-00/img-hosting@main/LabBlog/test2.jpg'},
-        {name: "vue", img: 'https://cdn.jsdelivr.net/gh/Labmem-00/img-hosting@main/LabBlog/test1.jpg'},
-        {name: "vue", img: 'https://cdn.jsdelivr.net/gh/Labmem-00/img-hosting@main/LabBlog/test1.jpg'},
-        {name: "vue", img: 'https://cdn.jsdelivr.net/gh/Labmem-00/img-hosting@main/LabBlog/test1.jpg'},
-        {name: "vue", img: 'https://cdn.jsdelivr.net/gh/Labmem-00/img-hosting@main/LabBlog/test1.jpg'},
-        // {name: "vue", img: 'https://cdn.jsdelivr.net/gh/Labmem-00/img-hosting@main/LabBlog/test1.jpg'},
-        // {name: "vue", img: 'https://cdn.jsdelivr.net/gh/Labmem-00/img-hosting@main/LabBlog/test1.jpg'},
-        // {name: "vue", img: 'https://cdn.jsdelivr.net/gh/Labmem-00/img-hosting@main/LabBlog/test1.jpg'},
+        {name: '命运石之门'}
     ],
 
     footer: {

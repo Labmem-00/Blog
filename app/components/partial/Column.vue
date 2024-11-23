@@ -23,7 +23,7 @@ const formattedDate = computed(() => {
             <span>
                  {{ article.title }}
             </span>
-            <NuxtImg v-if="image" class="article-cover" :src="image" :alt="title" loading="lazy" />
+            <NuxtImg v-if="article.image" class="article-cover" :src="article.image" :alt="article.title" loading="lazy" />
         </ZRawLink>
     </ol>
 </template>
@@ -50,5 +50,26 @@ const formattedDate = computed(() => {
     &:hover time {
         opacity: 1;
     }
+    &:hover {
+        .article-cover {
+            opacity: 1;
+            width: 50%;
+            object-position: center 43.5%;
+        }
+    }
+}
+
+.article-cover {
+    position: absolute;
+    opacity: 0.8;
+    top: 0;
+    right: 0;
+    width: min(50%, 180px);
+    height: 100%;
+    margin: 0;
+    mask: linear-gradient(to right, transparent, #fff7);
+    transition: all 0.2s;
+    object-fit: cover;
+    z-index: -1;
 }
 </style>

@@ -88,6 +88,9 @@ const columnWords = computed(() => {
     position: sticky;
     opacity: 0.5;
     font-size: min(1em, 1em);
+    @media screen and (max-width: $breakpoint-phone){
+        font-size: min(0.5em, 0.5em);
+    }
     color: transparent;
     transition: color 0.2s;
     .column-name {

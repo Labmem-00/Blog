@@ -27,7 +27,7 @@ const isColumn = ref(true);
             <div class="row" v-show="route.path === '/column'">
                 <p class="column-item" v-for="(column, index) in columns">
                     <ZRawLink :to="`/column/${column.name}`">
-                        <img :src="column.img" alt="" />
+                        <img :src="column.img" :alt="column.name" />
                         <span>{{ column.name }}</span>
                     </ZRawLink>
                 </p>
@@ -79,6 +79,7 @@ const isColumn = ref(true);
     }
     span {
         opacity: 1;
+        position: relative;
         visibility: visible; /* 默认可见 */
         transition: opacity 1s ease; 
     }
