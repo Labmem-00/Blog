@@ -2,7 +2,8 @@
 title: 组件样式示例
 date: 2024-09-21 23:18:18
 hideInfo: false
-categories: [专栏,react]
+categories: [专栏,vue]
+image: https://cdn.jsdelivr.net/gh/Labmem-00/img-hosting@main/LabBlog/test1.jpg
 icon: https://www.zhilu.cyou/api/icon.png
 recommend: 1
 ---

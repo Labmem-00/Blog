@@ -4,7 +4,7 @@ useSeoMeta({
     description: "专栏文章",
 });
 const layoutStore = useLayoutStore();
-layoutStore.setAside([]);
+layoutStore.setAside(['blog_stats']);
 
 const appConfig = useAppConfig();
 const columns = appConfig.columns;
@@ -14,7 +14,7 @@ const isColumn = ref(true);
 
 <template>
     <div class="blog-column">
-        <div class="column-title">
+        <div class="column-title"  v-show="route.path == '/column'">
             <p>
                 <span>专</span>
                 <span>栏</span>
@@ -80,14 +80,11 @@ const isColumn = ref(true);
     span {
         opacity: 1;
         visibility: visible; /* 默认可见 */
-        transition: opacity 1s ease; /* 在不hover时触发过渡 */
+        transition: opacity 1s ease; 
     }
 }
 
 .column-title {
-    @media screen and (max-width: $breakpoint-phone) {
-        left: 28%;
-    }
     position: relative;
     top: 10px;
     & p:after {
