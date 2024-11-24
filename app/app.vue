@@ -1,5 +1,10 @@
+<script setup lang="ts">
+const layoutStore = useLayoutStore()
+
+</script>
+
 <template>
-    <Rain></Rain>
+    <Rain v-if="layoutStore.isOpen('snow')"></Rain>
     <NuxtLoadingIndicator />
     <SkipToContent />
     <ZSidebar />

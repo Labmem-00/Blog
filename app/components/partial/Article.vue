@@ -48,8 +48,8 @@ const categoryIcon = appConfig.article.categories[categoryLabel!]?.icon
                 >
                     <Icon :name="categoryIcon" />
                     {{ categoryLabel }}
-                    <span v-for="category in categories">
-                        / {{ category }}
+                    <span v-for="category in categories" class="cate-child">
+                        {{ category }}
                     </span>
                 </span>
                 <span v-if="readingTime?.words" class="article-words">
@@ -62,6 +62,13 @@ const categoryIcon = appConfig.article.categories[categoryLabel!]?.icon
 </template>
 
 <style lang="scss" scoped>
+.cate-child{
+    color: var(--c-text-2);
+    &::before{
+        content: '•';
+        color: #ADD8E6;
+    }
+}
 .article-card {
     container-type: inline-size;
     display: block;

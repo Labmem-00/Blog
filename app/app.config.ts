@@ -19,7 +19,9 @@ export default defineAppConfig({
 
     //专栏
     columns : [
-        {name: '命运石之门', img: 'https://cdn.jsdelivr.net/gh/Labmem-00/img-hosting@main/LabBlog/SteinsGate.png'}
+        {name: '命运石之门', img: 'https://s2.loli.net/2024/11/24/zrUlh4F7ciHf6Bn.jpg' },
+        {name: '前端基石JS', img: ''},
+        {name: '前端基石HTML与CSS', img: ''}
     ],
 
     footer: {

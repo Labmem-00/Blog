@@ -27,7 +27,8 @@ const isColumn = ref(true);
             <div class="row" v-show="route.path === '/column'">
                 <p class="column-item" v-for="(column, index) in columns">
                     <ZRawLink :to="`/column/${column.name}`">
-                        <img :src="column.img" :alt="column.name" />
+                        <NuxtImg :src="column.img" :alt="column.name"></NuxtImg>
+                        <!-- <img :src="column.img" :alt="column.name" /> -->
                         <span>{{ column.name }}</span>
                     </ZRawLink>
                 </p>

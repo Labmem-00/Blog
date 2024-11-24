@@ -5,7 +5,8 @@ const defaultState = {
     sidebar: false,
     aside: false,
     search: false,
-    category: false
+    category: false,
+    snow: true,
 }
 
 type LayoutSection = keyof typeof defaultState

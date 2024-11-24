@@ -4,6 +4,10 @@
   "version": "3.0.8",
   "private": true,
   "packageManager": "pnpm@9.12.3",
+  "bin": {
+    "newB":"scripts/new-blog.js",
+    "newC":"scripts/new-column.js" 
+  },
   "scripts": {
     "prepare": "nuxi prepare",
     "dev": "nuxi dev --no-qr",
@@ -12,7 +16,8 @@
     "preview": "nuxi preview",
     "lint": "eslint .",
     "lint:fix": "eslint --fix .",
-    "new": "node scripts/new-blog.js"
+    "newB": "node scripts/new-blog.js",
+    "newC": "node scripts/new-column.js"
   },
   "dependencies": {
     "@iconify/vue": "^4.1.2",

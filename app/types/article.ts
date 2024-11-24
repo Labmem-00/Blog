@@ -25,6 +25,7 @@ export interface CustomArticleProps {
     recommend: number | boolean
     references: { title: string, link: string }[]
     readingTime: ReadTimeResults
+    show: boolean
 }
 
 export type ArticleCategory = keyof typeof _appConfig.article.categories & string

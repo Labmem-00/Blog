@@ -20,13 +20,29 @@ const categoryStore = useCategoryStore()
 const { data: listRaw } = await useAsyncData(
     'posts_index',
     () => queryContent()
-        .only(['_path', 'categories', 'image', 'date', 'description', 'readingTime', 'recommend', 'title', 'updated'])
-        .where({ _original_dir: { $eq: '/posts' } })
+        .only(['_path', 'categories', 'image', 'date', 'description', 'readingTime', 'recommend', 'title', 'updated', 'show'])
+        .where({
+            $and: [
+                {
+                    $or:[
+                        { _original_dir: { $eq: '/posts' }},
+                        { _original_dir: { $eq: '/columns'}},
+                    ]
+                },
+                {
+                    $or:[
+                        {show: {$exists: false}},
+                        {show: true}
+                    ]
+                }   
+            ]
+        })
         .find(),
     { default: () => [] },
 )
-
+console.log(listRaw.value)
 const listFilterCate = computed(() => {
+
     return categoryStore.currentCate !== '分类'
         ? listRaw.value.filter(post => {
             return post.categories && post.categories.includes(categoryStore.currentCate)

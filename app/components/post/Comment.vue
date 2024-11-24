@@ -1,17 +1,17 @@
 <script setup lang="ts">
-const appConfig = useAppConfig()
+const appConfig = useAppConfig();
 
 function initTwikoo() {
     (window as any).twikoo?.init?.({
         envId: appConfig.twikoo.envId,
-        el: '#twikoo',
-    })
+        el: "#twikoo",
+    });
 }
 
 // 从其他页面路由至文章页面时，通过 onLoaded 事件初始化，onMounted 不起作用
-useScriptTag(appConfig.twikoo.js, () => initTwikoo(), { defer: true })
+useScriptTag(appConfig.twikoo.js, () => initTwikoo(), { defer: true });
 // 在文章页面之间路由时不会触发 onLoaded 事件，需要手动初始化
-onMounted(() => initTwikoo())
+onMounted(() => initTwikoo());
 </script>
 
 <template>
@@ -20,9 +20,7 @@ onMounted(() => initTwikoo())
         <ClientOnly>
             <div id="twikoo" />
             <template #fallback>
-                <p id="twikoo">
-                    评论加载中...
-                </p>
+                <p id="twikoo">评论加载中...</p>
             </template>
         </ClientOnly>
     </section>
@@ -42,14 +40,16 @@ onMounted(() => initTwikoo())
     margin: 2em 0;
 
     //对助手表情包特化样式
-    .tk-owo-emotion[src^='https://cdn.jsdelivr.net/gh/Labmem-00/img-hosting@main/LabBlog-emoji/']{
+    .tk-owo-emotion[src^='https://cdn.jsdelivr.net/gh/Labmem-00/img-hosting@main/LabBlog-emoji/']
+    {
         width: 72px;
         height: 72px;
     }
-    .OwO-item{
-        img[src^='https://cdn.jsdelivr.net/gh/Labmem-00/img-hosting@main/LabBlog-emoji/']{
+    .OwO-item {
+        img[src^='https://cdn.jsdelivr.net/gh/Labmem-00/img-hosting@main/LabBlog-emoji/']
+        {
             width: auto;
-            height:100%;
+            height: 100%;
         }
     }
 
@@ -60,6 +60,9 @@ onMounted(() => initTwikoo())
 
     .tk-input {
         font-family: var(--font-monospace);
+        background-image: url("https://npm.elemecdn.com/akilar-candyassets/image/zhifeiji.gif");
+        background-repeat: no-repeat;
+        background-position: 100% 40%;
     }
 
     .tk-time {
@@ -78,7 +81,8 @@ onMounted(() => initTwikoo())
         }
     }
 
-    .tk-comments-title, .tk-nick > strong {
+    .tk-comments-title,
+    .tk-nick > strong {
         font-weight: var(--font-weight-medium);
     }
 
@@ -98,7 +102,9 @@ onMounted(() => initTwikoo())
         height: 0.2em;
     }
 
-    menu, ol, ul {
+    menu,
+    ol,
+    ul {
         margin-block: 0.5em;
         padding: 0 0 0 1.5em;
         list-style: revert;
@@ -135,7 +141,8 @@ onMounted(() => initTwikoo())
         vertical-align: text-bottom;
     }
 
-    .tk-extras, .tk-footer {
+    .tk-extras,
+    .tk-footer {
         font-size: 0.7rem;
         color: var(--c-text-3);
     }

@@ -39,7 +39,6 @@ const listSorted = computed(() => alphabetical(
                     </ZRawLink>预览
                 </h1>
             </div>
-            <ZOrderToggle v-model="orderBy" />
         </div>
         <p>勇敢的人探索世界。这里是一些还未发布的文章。</p>
 

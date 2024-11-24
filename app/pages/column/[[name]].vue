@@ -41,7 +41,7 @@ const { data: listRaw } = await useAsyncData(
                 "updated",
             ])
             .where({
-                _original_dir: { $eq: "/posts" },
+                _original_dir: { $eq: "/columns" },
                 categories: { $in: ["专栏"] },
             })
             .find(),
@@ -75,7 +75,7 @@ const columnWords = computed(() => {
         color: var(--c-text-3);
     }
 
-    menu{
+    menu {
         position: relative;
         top: 10px;
     }
@@ -87,12 +87,11 @@ const columnWords = computed(() => {
     gap: 1em;
     position: sticky;
     opacity: 0.5;
-    font-size: min(1em, 1em);
-    @media screen and (max-width: $breakpoint-phone){
-        font-size: min(0.6em, 0.6em);
-    }
+    font-size: min(0.9em, 0.9em);
+
     color: transparent;
     transition: color 0.2s;
+
     .column-name {
         margin-bottom: -0.3em;
         mask: linear-gradient(#fff 50%, transparent);
@@ -107,6 +106,9 @@ const columnWords = computed(() => {
         column-gap: 0.5em;
         flex-wrap: wrap;
         font-size: 24px;
+    }
+    @media screen and (max-width: $breakpoint-phone) {
+        font-size: min(0.6em, 0.6em);
     }
 }
 </style>

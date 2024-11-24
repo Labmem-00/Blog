@@ -36,6 +36,9 @@ const keycut = computed(() => navigator?.userAgent.includes('Mac OS') ? '⌘K' :
         </nav>
         <footer class="sidebar-footer">
             <InteractiveButton></InteractiveButton>
+            <button @click="layoutStore.toggle('snow')" class="snow-button">
+                <Icon :name="layoutStore.isOpen('snow') ? 'bi:snow2': 'arcticons:snow-icon-pack'"></Icon>
+            </button>
             <ThemeToggle />
             <ZIconNavList :list="appConfig.footer.iconNav" />
         </footer>
@@ -43,6 +46,41 @@ const keycut = computed(() => navigator?.userAgent.includes('Mac OS') ? '⌘K' :
 </template>
 
 <style lang="scss" scoped>
+.snow-button {
+    position: relative;
+    top: 20px;
+    font-size: 20px;
+    height: 25px;
+    color: var(--c-text);
+    &:hover{
+        border-radius: 50%;
+        background-color:  var(--c-bg-soft);
+    }
+    &::after {
+    content: "snow"; /* 提示文本内容 */
+    position: absolute;
+    bottom: 35px; /* 距离按钮的垂直位置 */
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: grey;
+    color: var(--c-text);
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-size: 12px;
+    white-space: nowrap;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s, visibility 0.3s;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  /* 悬浮时显示提示文本 */
+  &:hover::after {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
 #z-sidebar {    
     @include bgImg('https://cdn.jsdelivr.net/gh/Labmem-00/img-hosting@main/LabBlog/siderBar.png');
     background-position: center bottom;
