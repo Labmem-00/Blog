@@ -4,11 +4,11 @@ import type { FeedEntry } from '~/types/feed'
 // 存储 nuxt.config 和 app.config 共用的配置
 const blogConfig = {
     title: 'SteinsNote',
-    subtitle: '某个晴天，在一个叫做秋叶原的地方，她的生命如泡沫那般消失了。',
+    subtitle: 'Nurupo, Ga?!',
     description: 'El Psy Kongroo, 欢迎光临未来道具研究所博客分站, 本站致力于记录某些奇怪技术?与Lab项目进度',
     author: {
         name: 'Labmem00',
-        avatar: 'https://cdn.jsdelivr.net/gh/Labmem-00/img-hosting@main/LabBlog/avator-v1.jpg',
+        avatar: 'https://cdn.jsdelivr.net/gh/Labmem-00/img-hosting@main/LabBlog/助手.jpg',
         email: '13767083791@163.com',
         homepage: 'https://blog.labmem.chat',
     },

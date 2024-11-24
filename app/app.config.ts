@@ -8,9 +8,6 @@ export default defineAppConfig({
     article: {
         categories: {
             分类: {},
-            经验分享: { icon: 'ph:mouse-bold', color: '#3af' },
-            生活: { icon: 'ph:shooting-star-bold', color: '#3ba' },
-            代码: { icon: 'ph:code-bold', color: '#77f' },
             专栏: { icon : 'line-md:coffee-half-empty-twotone-loop',color:'#B97BDB'}
         },
         order: {
@@ -20,8 +17,9 @@ export default defineAppConfig({
         },
     },
 
+    //专栏
     columns : [
-        {name: '命运石之门'}
+        {name: '命运石之门', img: 'https://cdn.jsdelivr.net/gh/Labmem-00/img-hosting@main/LabBlog/SteinsGate.png'}
     ],
 
     footer: {
@@ -46,8 +44,7 @@ export default defineAppConfig({
             {
                 title: '信息',
                 items: [
-                    { icon: 'ph:swatches-bold', text: '主题灵感源自Stellar', url: '/theme' },
-                    { icon: 'ph:certificate-bold', text: '萌ICP备20246888号', url: 'https://icp.gov.moe/?keyword=20246888' },
+                    // { icon: 'ph:swatches-bold', text: '主题灵感源自Stellar', url: '/theme' },
                 ],
             },
         ],
@@ -55,7 +52,7 @@ export default defineAppConfig({
     },
 
     header: {
-        logo: 'https://cdn.jsdelivr.net/gh/Labmem-00/img-hosting@main/LabBlog/avator-v2.jpg',
+        logo: 'https://cdn.jsdelivr.net/gh/Labmem-00/img-hosting@main/LabBlog/avator.jpg',
         text: true,
         subtitle: blogConfig.subtitle,
         emojiTail: ['🌀', '⏳', '🎧 ', '🥼', '📺'],
