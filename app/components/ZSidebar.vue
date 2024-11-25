@@ -36,7 +36,7 @@ const keycut = computed(() => navigator?.userAgent.includes('Mac OS') ? '⌘K' :
         </nav>
         <footer class="sidebar-footer">
             <InteractiveButton></InteractiveButton>
-            <button @click="layoutStore.toggle('snow')" class="snow-button">
+            <button @click="layoutStore.toggle('snow')" class="snow-button" aria-label="雪">
                 <Icon :name="layoutStore.isOpen('snow') ? 'bi:snow2': 'arcticons:snow-icon-pack'"></Icon>
             </button>
             <ThemeToggle />
@@ -82,7 +82,7 @@ const keycut = computed(() => navigator?.userAgent.includes('Mac OS') ? '⌘K' :
 }
 
 #z-sidebar {    
-    @include bgImg('https://cdn.jsdelivr.net/gh/Labmem-00/img-hosting@main/LabBlog/siderBar.png');
+    @include bgImg('/img/siderBar.png');
     background-position: center bottom;
     display: flex;
     flex-direction: column;

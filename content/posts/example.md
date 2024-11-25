@@ -2,7 +2,7 @@
 title: 组件样式示例
 date: 2024-09-21 23:18:18
 hideInfo: false
-categories: [代码]
+categories: [专栏,命运石之门]
 icon: https://www.zhilu.cyou/api/icon.png
 ---
 

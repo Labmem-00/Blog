@@ -57,7 +57,7 @@ const appConfig = useAppConfig();
 .z-footer {
     position: relative;
     @include bgImg(
-        "https://cdn.jsdelivr.net/gh/Labmem-00/img-hosting@main/LabBlog/footer.png"
+        "/img/footer.png"
     );
     background-position: right bottom;
     margin: 3rem 1rem;

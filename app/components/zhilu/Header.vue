@@ -47,7 +47,7 @@ const appConfig = useAppConfig();
 }
 
 .zhilu-logo {
-    height: 3em;
+    height: 4em;
 
     &.with-text {
         aspect-ratio: 1;
@@ -76,8 +76,8 @@ const appConfig = useAppConfig();
 }
 
 .header-subtitle {
-    opacity: 0.5;
-    font-size: 0.8em;
+    opacity: 0.8;
+    font-size: 1em;
 }
 
 @keyframes vf-weight {
@@ -85,7 +85,7 @@ const appConfig = useAppConfig();
         font-weight: 600;
     }
     38.2% {
-        font-weight: 500;
+        font-weight: 300;
     }
     100% {
         font-weight: 900;

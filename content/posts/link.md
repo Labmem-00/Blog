@@ -2,6 +2,7 @@
 title: 友链
 aside: []
 hideInfo: true
+categories: [专栏,命运石之门]
 ---
 
 ::tab
