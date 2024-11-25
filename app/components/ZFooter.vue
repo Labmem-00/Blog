@@ -57,7 +57,7 @@ const appConfig = useAppConfig();
 .z-footer {
     position: relative;
     @include bgImg(
-        "/img/footer.png"
+        "https://s2.loli.net/2024/11/25/RQShuXvtsZ6qj5N.png"
     );
     background-position: right bottom;
     margin: 3rem 1rem;

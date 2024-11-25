@@ -82,7 +82,7 @@ const keycut = computed(() => navigator?.userAgent.includes('Mac OS') ? '⌘K' :
 }
 
 #z-sidebar {    
-    @include bgImg('/img/siderBar.png');
+    @include bgImg('https://s2.loli.net/2024/11/25/5j2g4HJAzw6Mc1D.png');
     background-position: center bottom;
     display: flex;
     flex-direction: column;

@@ -54,7 +54,7 @@ export default defineAppConfig({
     },
 
     header: {
-        logo: 'https://cdn.jsdelivr.net/gh/Labmem-00/img-hosting@main/LabBlog/avator.jpg',
+        logo: 'https://s2.loli.net/2024/11/25/ukIEmBNJ2ocw4MQ.jpg',
         text: true,
         subtitle: blogConfig.subtitle,
         emojiTail: ['🌀', '⏳', '🎧 ', '🥼', '📺'],
