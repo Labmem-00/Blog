@@ -55,10 +55,10 @@ const isColumn = ref(true);
 }
 
 .column-item {
-    width: 180px;
-    height: 240px;
+    width: 150px;
+    height: 200px;
     font-size: 20px;
-    max-width: 240px;
+    max-width: 2400px;
     border: 1px solid #000; /* 黑色细边框 */
     border-radius: 3px;
     box-shadow: -10px 5px 15px var(--bg-shadow-1);
