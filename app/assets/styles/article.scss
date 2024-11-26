@@ -1,3 +1,4 @@
+// 文章的渲染样式
 .article {
     margin: 1rem;
     line-height: 1.8;
@@ -123,6 +124,11 @@
 
         p {
             text-indent: 2em;
+        }
+    }
+    .footnotes{
+        li::marker{
+            font-size: 1em; 
         }
     }
 }

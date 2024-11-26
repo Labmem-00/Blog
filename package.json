@@ -5,8 +5,8 @@
   "private": true,
   "packageManager": "pnpm@9.12.3",
   "bin": {
-    "newB":"scripts/new-blog.js",
-    "newC":"scripts/new-column.js" 
+    "newB": "scripts/new-blog.js",
+    "newC": "scripts/new-column.js"
   },
   "scripts": {
     "prepare": "nuxi prepare",
@@ -30,9 +30,11 @@
     "embla-carousel-autoplay": "^8.3.1",
     "embla-carousel-vue": "^8.3.1",
     "fast-xml-parser": "^4.5.0",
+    "markdown-it-footnote": "^4.0.0",
     "parse-domain": "^8.2.2",
     "plain-shiki": "^0.0.12",
     "radash": "^12.1.0",
+    "remark-gfm": "^4.0.0",
     "shiki": "^1.22.2",
     "vue": "^3.5.12",
     "vue-tippy": "^6.5.0"
@@ -45,6 +47,7 @@
     "@nuxtjs/color-mode": "^3.5.2",
     "@nuxtjs/seo": "2.0.0-rc.21",
     "@pinia/nuxt": "^0.6.0",
+    "@types/markdown-it": "^14.1.2",
     "@vueuse/nuxt": "^11.1.0",
     "@zinkawaii/nuxt-shiki": "^0.7.1",
     "@zinkawaii/stylelint-config": "^0.1.5",

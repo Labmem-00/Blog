@@ -1,6 +1,7 @@
 import type { BundledTheme } from "shiki";
 import blogConfig from "./blog.config";
-// import redirects from "./redirects";
+import remarkGfm from "remark-gfm";
+import remarkReadingTime from "remark-reading-time";
 
 const shikiOptions = {
     langs: blogConfig.fileExtensions,
@@ -18,7 +19,10 @@ export default defineNuxtConfig({
                 lang: blogConfig.language,
             },
             link: [
-                { rel: "icon", href: 'https://cdn.jsdelivr.net/gh/Labmem-00/img-hosting@main/LabBlog/favicon.ico' },
+                {
+                    rel: "icon",
+                    href: "https://cdn.jsdelivr.net/gh/Labmem-00/img-hosting@main/LabBlog/favicon.ico",
+                },
                 {
                     rel: "alternate",
                     type: "application/atom+xml",
@@ -130,22 +134,28 @@ export default defineNuxtConfig({
             },
         },
         markdown: {
-            remarkPlugins: ["remark-reading-time"],
+            remarkPlugins: [
+                ["remark-reading-time", remarkReadingTime],
+                ['remark-gfm', remarkGfm]
+            ],
             toc: { depth: 4, searchDepth: 4 }, //目录渲染
         },
     },
 
     icon: {
-        customCollections: [{ prefix: "zi", dir: "https://cdn.jsdelivr.net/gh/Labmem-00/img-hosting@main/LabBlog/favicon.ico" }],
+        customCollections: [
+            {
+                prefix: "zi",
+                dir: "https://cdn.jsdelivr.net/gh/Labmem-00/img-hosting@main/LabBlog/favicon.ico",
+            },
+        ],
         // BUG: 首次加载有概率无图标
     },
 
     image: {
-        domains: [
-        ],
+        domains: [],
         format: ["avif", "webp"],
     },
-
 
     robots: {
         disallow: ["/preview", "/previews/*"],

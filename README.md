@@ -30,6 +30,14 @@ pnpm dev
 pnpm generate
 ```
 
+添加文章脚本
+
+```sh
+npm link 将命令部署全局
+```
+script两个脚本分别对应增加博文和专栏文
+修改地址至本地项目的content文件夹，任意位置下使用newB/newC将自动创建对应文件并打开vscode
+
 ## 项目开发文档
 ...编写中
 

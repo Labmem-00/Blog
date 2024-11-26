@@ -34,7 +34,7 @@ aside {
     flex-shrink: 0;
     position: sticky;
     top: 0;
-    width: 280px;
+    width: 300px;
     height: 100vh;
     height: 100dvh;
     scrollbar-width: thin;

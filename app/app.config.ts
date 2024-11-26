@@ -8,6 +8,7 @@ export default defineAppConfig({
     article: {
         categories: {
             分类: {},
+            散记: {icon: 'mdi:book-open-variant', color:'#5A9BD8'},
             专栏: { icon : 'line-md:coffee-half-empty-twotone-loop',color:'#B97BDB'}
         },
         order: {
@@ -20,9 +21,10 @@ export default defineAppConfig({
     //专栏
     columns : [
         {name: '命运石之门', img: 'https://s2.loli.net/2024/11/24/zrUlh4F7ciHf6Bn.jpg' },
-        {name: '前端基石JS', img: ''},
-        {name: '前端基石HTML与CSS', img: ''}
-    ],
+        {name: 'miniVue实现', img: ''},
+        {name: '前端基础面经', img: ''},
+        {name: 'JS面经', img:''}
+    ], 
 
     footer: {
         copyright: `© ${new Date().getFullYear()} ${blogConfig.author.name}`,
