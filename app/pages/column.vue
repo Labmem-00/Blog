@@ -58,7 +58,7 @@ const isColumn = ref(true);
     width: 150px;
     height: 200px;
     font-size: 20px;
-    max-width: 2400px;
+    max-width: 200px;
     border: 1px solid #000; /* 黑色细边框 */
     border-radius: 3px;
     box-shadow: -10px 5px 15px var(--bg-shadow-1);
@@ -83,6 +83,10 @@ const isColumn = ref(true);
         position: relative;
         visibility: visible; /* 默认可见 */
         transition: opacity 1s ease; 
+    }
+    @media screen and (max-width: $breakpoint-phone) {
+        width: 120px;
+        height: 160px;
     }
 }
 
