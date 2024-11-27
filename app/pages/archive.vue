@@ -19,7 +19,22 @@ const { data: listRaw } = await useAsyncData(
     'posts_archive',
     () => queryContent()
         .only(['_path', 'image', 'date', 'description', 'readingTime', 'title', 'updated'])
-        .where({ _original_dir: { $eq: '/posts' } })
+        .where({
+            $and: [
+                {
+                    $or:[
+                        { _original_dir: { $eq: '/posts' }},
+                        { _original_dir: { $eq: '/columns'}},
+                    ]
+                },
+                {
+                    $or:[
+                        {show: {$exists: false}},
+                        {show: true}
+                    ]
+                }   
+            ]
+        })
         .find(),
     { default: () => [] },
 )

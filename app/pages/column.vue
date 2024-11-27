@@ -87,6 +87,7 @@ const isColumn = ref(true);
     @media screen and (max-width: $breakpoint-phone) {
         width: 120px;
         height: 160px;
+        font-size: 16px;
     }
 }
 
