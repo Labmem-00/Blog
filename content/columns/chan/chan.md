@@ -16,7 +16,7 @@ github:
     url: https://github.com/Labmem-00/Lab002-Channel-Next
 ---
 
-::alert{type="info"}
+::alert{type="question"}
 #title
 Tip
 #default
@@ -25,7 +25,7 @@ Nuxt框架。
 
 **如何参与本项目开发**：确保熟悉基本的网站开发知识，例如前端三剑客，了解一些框架组件化的开发思想。在参与之前建议通读[React官方文档](https://zh-hans.react.dev/learn)以及[Next官方文档](https://nextjs.org/)。大致了解本项目开发技术之后可以前往[项目地址](https://github.com/Labmem-00/Lab002-Channel-Next)clone本项目翻阅源码。也可参阅此开发文档查看项目详情，请至少了解本项目的[目录结构](chan/nextdirectory)。
 
-**开发工具的使用**：了解[Git操作](https://liaoxuefeng.com/books/git/what-is-git/index.html)是参与多人协同开发的基本，我将在[项目开发工具的使用](chan/tools)一文详细介绍具体事项。
+**开发工具的使用**：了解[Git操作](https://liaoxuefeng.com/books/git/what-is-git/index.html)是参与多人协同开发的基本，我将在[项目开发工具的使用](/chan/tools)一文详细介绍具体事项。
 
 项目立项于2024年12月5日，本文档开始撰写于同年12月15日，本Tip写于12月15日。
 ::
@@ -34,7 +34,7 @@ Nuxt框架。
 
 ### 为什么立项？
 本文作者是一名临近毕业的大四学生， 专通于前端技术，开始的目的是为了完成一个自主实现的毕业设计。
-思来想去不如整发大的，利用目前所学习的技术来实现`命运石之门`[^1]中的`@channel讨论版`[^2]，实际上就是一个相当普通的ACG论坛项目。详细可以参考这个论坛:
+思来想去不如利用目前所学习的技术来实现`命运石之门`[^1]中的`@channel讨论版`[^2]，实际上就是一个相当普通的ACG论坛项目。详细可以参考这个论坛:
 
 ::Link-card
 ---
@@ -85,7 +85,7 @@ link: https://www.kungal.com/zh-cn
 
 > 实时消息推送: Pusher
 
-项目倾向于最小化部署，不引用过多的依赖包，所以并未选择某款UI组件库，详情可见项目package.json
+项目倾向于最小化部署，不引用过多的依赖包，所以并未选择某款UI组件库，详情可见项目package.json。
 
 ## 下一篇更新
 

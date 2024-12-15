@@ -70,7 +70,7 @@ Next为什么叫全栈框架？除了提供服务端渲染以外，它还支持�
 是熟悉的味道，放置一些状态管理的代码文件，本项目使用[zustand](https://awesomedevin.github.io/zustand-vue/)进行状态管理。
 
 ### styles
-夹如其名，一些样式文件，使用sass编写，特别强制，项目在处理一些复杂样式时建议使用css module与sass。
+夹如其名，一些样式文件，使用sass编写，项目在处理一些复杂样式时建议使用css module与sass。
 
 ### types
 TS的一些类型定义
@@ -131,4 +131,4 @@ Next项目的配置文件，可以忽略
 
 ## 下一篇更新
 
-[运行本项目与工具使用](chan/tools)
+[运行本项目与工具使用](/chan/tools)
