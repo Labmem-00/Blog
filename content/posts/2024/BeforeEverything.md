@@ -3,10 +3,10 @@ title: 写在博客之前
 description: 匆忙上线的落幕，顿感还得是纯静态
 date: 2024-6-13 16:44:23
 updated: 2024-11-10 16:44:23
-image: https://cdn.jsdelivr.net/gh/Labmem-00/img-hosting@main/Blog/beforeV2.png
+image: https://7.isyangs.cn/65/675e2ed4bbb5b-65.webp
 type: story
 categories: [散记]
-aside: [toc, github_card] 
+aside: [toc, github_card]
 github:
     name: Labmem-00/Blog
     description: 基于纸🦌摸鱼处源码的魔改，使用Nuxt3构建。

@@ -1,6 +1,5 @@
 <script setup lang="ts">
 const layoutStore = useLayoutStore()
-
 </script>
 
 <template>

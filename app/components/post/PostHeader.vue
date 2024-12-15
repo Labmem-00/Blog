@@ -147,6 +147,7 @@ useCopy(btnShareByText, btnShareByText, shareText)
         gap: 0.5em 1.2em;
         column-gap: clamp(1em, 3cqw, 1.5em);
         flex-wrap: wrap;
+        color: black;
     }
 }
 </style>

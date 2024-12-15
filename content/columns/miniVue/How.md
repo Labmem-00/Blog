@@ -1,17 +1,14 @@
 ---
 title: Vue3.4核心源码实现指南
-description: 
+description: 我搓Vue3？真的假的？！
 date: 2024-11-27 21:13:38
-# updated: 
-# image: 
-# type: story #类型可选tech|story, tech标题左对齐, story居中
-categories: [专栏, miniVue] # 专栏类，第二，三个参数分别对应分类层级
-tags: []
+# updated:
+image: https://7.isyangs.cn/65/675e2e13457d0-65.webp
+categories: [技术分享]
+tags: [前端，vue]
 # cover_revert: boolean #封面是否反转样式
 # hideInfo: boolean #是否隐藏文章头部相关信息
-# recommend: number | boolean #轮播图推荐指数
+recommend: 1
 # references: { title: string, link: string }[] #参考文献
-show: false 
+show: true
 ---
-
-

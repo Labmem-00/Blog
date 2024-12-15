@@ -9,6 +9,7 @@ export default defineAppConfig({
         categories: {
             分类: {},
             散记: {icon: 'mdi:book-open-variant', color:'#5A9BD8'},
+            技术分享: {icon: 'ant-design:code-twotone', color:'#4CAF50'},
             专栏: { icon : 'line-md:coffee-half-empty-twotone-loop',color:'#B97BDB'}
         },
         order: {
@@ -20,7 +21,7 @@ export default defineAppConfig({
 
     //专栏
     columns : [
-        {name: '命运石之门', img: 'https://s2.loli.net/2024/11/24/zrUlh4F7ciHf6Bn.jpg' },
+        {name: 'chan开发文档', img: 'https://s2.loli.net/2024/11/24/zrUlh4F7ciHf6Bn.jpg' },
         {name: 'Vue3源码实现', img: 'https://cn.vuejs.org/logo.svg'},
         {name: '前端基础', img: 'https://s2.loli.net/2024/11/27/oeNp7S1R9EtPTdh.png'},
         {name: 'JS', img:'https://s2.loli.net/2024/11/27/YTgD8EF97fXBdCM.png'}
