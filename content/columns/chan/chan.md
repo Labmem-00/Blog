@@ -23,7 +23,7 @@ Tip
 本专栏文档为NextJS版本的@channel论坛实现，目前处于开发初期阶段。NextJS是一款扎根于React的全栈框架，类比Vue的
 Nuxt框架。
 
-**如何参与本项目开发**：确保熟悉基本的网站开发知识，例如前端三剑客，了解一些框架组件化的开发思想。在参与之前建议通读[React官方文档](https://zh-hans.react.dev/learn)以及[Next官方文档](https://nextjs.org/)。大致了解本项目开发技术之后可以前往[项目地址](https://github.com/Labmem-00/Lab002-Channel-Next)clone本项目翻阅源码。也可参阅此开发文档查看项目详情，请至少了解本项目的[目录结构](chan/nextdirectory)。
+**如何参与本项目开发**：确保熟悉基本的网站开发知识，例如前端三剑客，了解一些框架组件化的开发思想。在参与之前建议通读[React官方文档](https://zh-hans.react.dev/learn)以及[Next官方文档](https://nextjs.org/)。大致了解本项目开发技术之后可以前往[项目地址](https://github.com/Labmem-00/Lab002-Channel-Next)clone本项目翻阅源码。也可参阅此开发文档查看项目详情，请至少了解本项目的[目录结构](/chan/nextdirectory)。
 
 **开发工具的使用**：了解[Git操作](https://liaoxuefeng.com/books/git/what-is-git/index.html)是参与多人协同开发的基本，我将在[项目开发工具的使用](/chan/tools)一文详细介绍具体事项。
 
