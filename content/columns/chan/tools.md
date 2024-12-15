@@ -1,10 +1,10 @@
 ---
 title: 运行本项目与工具使用
-description:
+description: 项目运行于工具使用
 date: 2024-12-15 18:25:49
 # updated:
 # image:
-categories: [专栏, chan开发文档]
+categories: [专栏,chan开发文档]
 tags: []
 show: false
 ---
